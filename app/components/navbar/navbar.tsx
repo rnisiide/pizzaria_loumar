@@ -11,6 +11,7 @@ export default function NavBar() {
 
       <Box
         className={styles.wrapper}>
+
         <Box
           component="img"
           sx={{
@@ -18,7 +19,10 @@ export default function NavBar() {
             width: 118,
           }}
           alt="Logo pizzaria"
-          src="./Logo.png"
+          src="./Logo.svg"
+          onClick={() => {
+            alert("I'm a button.");
+          }}
         />
 
         <Box

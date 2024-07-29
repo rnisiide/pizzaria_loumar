@@ -20,7 +20,7 @@ export default function Footer() {
             width: 118,
           }}
           alt="Logo pizzaria"
-          src="./Logo.png"
+          src="./Logo.svg"
         />
         <Typography >
           Endereço
