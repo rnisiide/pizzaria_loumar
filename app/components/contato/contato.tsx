@@ -12,7 +12,7 @@ export default function Contato() {
     const [nomeError, setNomeError] = useState(false)
     const [mensagemError, setMensagemError] = useState(false)
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault()
 
         setEmailError(false)
