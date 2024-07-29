@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import Image from "next/image";
 
 export default function Hero() {
     return (
@@ -9,14 +10,20 @@ export default function Hero() {
                 }}>
             </Box>
             <Box
-                component="img"
                 sx={{
-                    width: 'auto',
+                    width: '100%',
                     height: 425,
-                }}
-                alt="Logo pizzaria"
-                src="./BANNER DESKTOP.png"
-            />
+                    position: 'relative'
+                }}>
+                <Image
+                    src={'/BANNER DESKTOP.png'}
+                    alt='logo'
+                    layout='fill'
+                    objectFit='cover'
+                />
+            </Box>
+
+
 
         </Box>
 
@@ -25,3 +32,22 @@ export default function Hero() {
 
     );
 }
+
+/*
+
+ <Box
+                sx={{
+                    display: 'block',
+                    maxWidth: '100%',
+                    height: 425,
+                }}
+            >
+                <Image
+                    objectFit="cover"
+                    fill
+
+                    src="/BANNER DESKTOP.png"
+                    alt="Logo pizzaria" />
+            </Box>
+
+*/

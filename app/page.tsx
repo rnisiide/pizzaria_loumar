@@ -15,7 +15,12 @@ export default function Home() {
     <ThemeProvider theme={theme}>
       <NavBar />
       <Hero />
-      <Container>
+      <Container
+        sx={{
+          width: 1216,
+        }}
+
+      >
         <Bloco_1 />
         <Faq />
         <Contato />
