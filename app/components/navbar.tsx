@@ -1,8 +1,4 @@
-import styles from "./navbar.module.css"
 import { Box, Container, AppBar, Toolbar, Button, Link } from "@mui/material";
-import { useRef } from "react";
-import NextLink from 'next/link';
-
 
 export default function NavBar() {
 

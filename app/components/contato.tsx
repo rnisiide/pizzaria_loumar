@@ -1,7 +1,6 @@
 "use client"
-import { FormControl, FormLabel } from '@mui/material';
 import React, { useState } from 'react';
-import { TextField, Button, Container, Stack, Box, Typography } from '@mui/material';
+import { TextField, Button, Container, Box, Typography } from '@mui/material';
 
 export default function Contato() {
 
@@ -86,7 +85,13 @@ export default function Contato() {
                         value={mensagem}
                         error={mensagemError}
                     />
-                    <Button type="submit">Enviar mensagem</Button>
+                    <Button
+                        variant='contained'
+                        type="submit"
+                        color='primary'
+                    >
+                        Enviar mensagem
+                    </Button>
                 </form>
             </Box>
         </Container>

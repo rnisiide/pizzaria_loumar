@@ -1,42 +1,41 @@
-import styles from "./footer.module.css"
 import { Container, Box, Typography } from "@mui/material";
 
 
 export default function Footer() {
-    return (
+  return (
 
+    <Box
+      component="footer"
+      id="footer"
+      sx={{
+        color: 'white',
+        bgcolor: '#FFB800',
+      }}
+    >
+      <Container>
         <Box
-            component="footer"
-            id="footer"
-            sx={{
-                color: 'white',
-                bgcolor: '#FFB800',
-            }}
-        >
-            <Container>
-                <Box
-                    component="img"
-                    sx={{
-                        height: 74.47,
-                        width: 118,
-                    }}
-                    alt="Logo pizzaria"
-                    src="./Logo.png"
-                />
-                <Typography >
-                    Endereço
-                </Typography>
-                <Typography>
-                    Av. Brasil, 74 - Foz do Iguaçu - CEP
-                </Typography>
-                <Typography>
-                    85851-000
-                </Typography>
-            </Container >
+          component="img"
+          sx={{
+            height: 74.47,
+            width: 118,
+          }}
+          alt="Logo pizzaria"
+          src="./Logo.png"
+        />
+        <Typography >
+          Endereço
+        </Typography>
+        <Typography>
+          Av. Brasil, 74 - Foz do Iguaçu - CEP
+        </Typography>
+        <Typography>
+          85851-000
+        </Typography>
+      </Container >
 
-        </Box>
+    </Box>
 
-    );
+  );
 }
 
 
