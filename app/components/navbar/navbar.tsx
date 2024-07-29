@@ -1,34 +1,77 @@
 import styles from "./navbar.module.css"
-import Image from "next/image";
+import { Box, Container, AppBar, Toolbar, Button, Link } from "@mui/material";
+import { useRef } from "react";
+import NextLink from 'next/link';
+
 
 export default function NavBar() {
+
+
   return (
-    <div className={styles.container}>
+    <Container>
+      <AppBar
+        position="fixed"
+        sx={{
+          boxShadow: 0,
+          height: 130.47,
+          bgcolor: '#FFB800',
+          display: 'flex',
+          justifyContent: 'space-around',
+          alignItems: 'center'
+        }}
 
-      <div className={styles.header}>
-        <div className={styles.logo}>
-
-        </div>
-        <div className={styles.links}>
-          <a href="">Bloco 1</a>
-          <a href="">FAQ</a>
-          <a href="">Contato</a>
-        </div>
-        <div className={styles.btn}>
-          <button>Entre em contato</button>
-        </div>
-
-      </div>
-
-      <div className={styles.image}>
-
-      </div>
+      >
+        <Toolbar>
+          <Box
+            component="img"
+            sx={{
+              height: 74.47,
+              width: 118,
+            }}
+            alt="Logo pizzaria"
+            src="./Logo.png"
+          />
+          <Box>
+            <Link href="#bloco_1">Bloco 1</Link>
+            <Link href="#faq">FAQ</Link>
+            <Link href="#contato">Contato</Link>
 
 
-    </div>
+
+          </Box>
+
+          <Button target="_blank" href="https://wa.me/5545988041417?text=Oi%20mensagem%0A">Entre em contato</Button>
+
+
+
+        </Toolbar>
+      </AppBar>
+
+
+
+
+
+    </Container>
+
 
   );
 }
 
 
-//<Image src="/BANNER DESKTOP.png" alt="" fill className={styles.heroImg} />
+
+/*
+
+{links.map((link, index) => (
+              <span key={index} className={`px-5 cursor-pointer ${activeSection == link && "text-orange-500"}`}>{link}</span>
+            ))}
+
+
+
+
+                        <ul>
+              <li onClick={() => scrollToSection(bloco_1)}>Bloco 1</li>
+              <li onClick={() => scrollToSection(faq)}>FAQ</li>
+              <li onClick={() => scrollToSection(contact)}>Contato</li>
+            </ul>
+
+>*/
