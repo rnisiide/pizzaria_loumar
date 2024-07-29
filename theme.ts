@@ -12,9 +12,17 @@ declare module '@mui/material/styles' {
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#fefefe',
+            main: '#0C111D',
         },
+        secondary: {
+            main: '#FFFFFF'
+        }
     },
+    typography: {
+        button: {
+            textTransform: 'none'
+        }
+    }
 });
 
 export default theme;
