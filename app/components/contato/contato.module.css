@@ -1,15 +1,6 @@
 @font-face {
-    font-family: 'Gilroy';
-    src: url('/fonts/Gilroy/Gilroy-Bold.ttf') format('truetype'),
-        /*   url('myfont.woff') format('woff');*/
-}
-
-
-@font-face {
     font-family: 'Gilroy-Bold';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Gilroy-Bold'), url('/fonts/Gilroy/Gilroy-Bold.woff') format('woff');
+    src: local('Gilroy-Bold'), url(../../../fonts/Gilroy/Gilroy-Bold.ttf) format('truetype');
 }
 
 .contato {
@@ -59,14 +50,6 @@
 
 }
 
-.form_wrapper>h2 {
-    padding-top: 8px;
-    padding-bottom: 16px;
-    font-family: 'Gilroy-Bold';
-    font-weight: normal;
-}
-
-
 
 .form_items {
     margin-top: 55px;
@@ -109,6 +92,11 @@
     flex-direction: column;
     margin-top: 8px;
     gap: 16px;
+
+}
+
+.gilroyText {
+    font-family: 'Gilroy-Bold';
 }
 
 .textMobile {

@@ -67,7 +67,7 @@ export default function Contato() {
                     Entre em contato
                 </Typography>
                 <Box className={styles.textDesktop}>
-                    <Typography variant="h2" align='center'>
+                    <Typography variant="h2" align='center' className={styles.gilroyText}>
                         Fale com a nossa equipe especializada
                         e adquira nossos serviços
                     </Typography>

@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import styles from "./bloco_1.module.css";
 
+
 const items = [
     {
         icon: './icon1.svg',

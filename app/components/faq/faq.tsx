@@ -72,7 +72,7 @@ export default function Faq() {
                     variant="h1">
                     FAQ
                 </Typography>
-                <Typography
+                <Typography className={styles.gilroyText}
                     marginBottom={2}
                     variant="h2">
                     Tire todas as suas dúvidas sobre nosso processo de produção!

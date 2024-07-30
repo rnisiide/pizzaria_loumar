@@ -1,9 +1,18 @@
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: local('Gilroy-Bold'), url(../../../fonts/Gilroy/Gilroy-Bold.ttf) format('truetype');
+}
+
 .wrapper {
     margin-top: 75px;
     margin-bottom: 128px;
     display: flex;
     gap: 36px;
 
+}
+
+.gilroyText {
+    font-family: 'Gilroy-Bold';
 }
 
 .faq_img {
