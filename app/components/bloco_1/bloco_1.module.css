@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+
+    /*
+        gap: 4,
+        marginTop: 4,
+        marginBottom: 4,
+*/
+
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .upperbox {
+        height: 80px;
+    }
+
+    .imagebox {
+        width: 100%;
+        height: 350px;
+        position: relative;
+
+    }
+
+    .image {
+        content: url('/BANNER MOBILE.png');
+    }
+
+
+
+}

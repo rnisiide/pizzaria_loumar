@@ -7,6 +7,7 @@ import Hero from "./components/hero/hero";
 import Bloco_1 from "./components/bloco_1/bloco_1";
 import Faq from "./components/faq/faq";
 import Contato from "./components/contato/contato";
+import styles from "./page.module.css";
 
 
 export default function Home() {
@@ -15,12 +16,7 @@ export default function Home() {
     <ThemeProvider theme={theme}>
       <NavBar />
       <Hero />
-      <Container
-        sx={{
-          width: 1216,
-        }}
-
-      >
+      <Container className={styles.container}>
         <Bloco_1 />
         <Faq />
         <Contato />

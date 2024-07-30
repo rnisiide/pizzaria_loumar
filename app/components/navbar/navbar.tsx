@@ -1,45 +1,68 @@
-import { Box, Container, AppBar, Toolbar, Button, Link } from "@mui/material";
-//import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+"use client"
+import { useState } from "react";
+import { Box, Button, Link } from "@mui/material";
 import WhatsAppIcon from '../../../public/whatsapp-line.svg'
 import styles from "./navbar.module.css";
+import Image from "next/image";
+
+
+const links = [
+  {
+    title: "Bloco 1",
+    path: "#bloco_1",
+
+  },
+  {
+    title: "FAQ",
+    path: "#faq",
+
+  },
+  {
+    title: "Contato",
+    path: "#contato",
+
+  },
+];
 
 export default function NavBar() {
+
+  const [open, setOpen] = useState(false)
+
   return (
     <Box
       position="fixed"
       className={styles.header}
     >
+      <Image
+        className={styles.menuButton}
+        src='/menu.svg'
+        alt=''
+        width={24}
+        height={24}
+        onClick={() => setOpen((prev) => !prev)} />
 
-      <Box
-        className={styles.wrapper}>
-
+      <Box className={styles.wrapper}>
         <Box
           component="img"
           sx={{
-            height: 74.47,
-            width: 118,
+            height: 53.01,
+            width: 84,
           }}
           alt="Logo pizzaria"
           src="./Logo.svg"
           onClick={() => {
-            alert("I'm a button.");
+            window.scroll({
+              top: 0,
+              behavior: 'smooth'
+            });
           }}
         />
 
-        <Box
-          className={styles.menu}
-          sx={{
-            display: 'flex',
-            gap: 4,
-            justifyContent: 'space-around',
-            fontSize: 14,
-            fontWeight: 600,
-            alignItems: 'center'
-          }}
-        >
-          <Link className={styles.link} color="secondary" href="#bloco_1">Bloco 1</Link>
-          <Link className={styles.link} color="secondary" href="#faq">FAQ</Link>
-          <Link className={styles.link} color="secondary" href="#contato">Contato</Link>
+        <Box className={styles.menu}>
+          {links.map((link =>
+            <Link className={styles.menu_item} color="secondary" href={link.path} scroll={false}>{link.title}</Link>
+
+          ))}
         </Box>
 
         <Button
@@ -53,6 +76,14 @@ export default function NavBar() {
         </Button>
 
       </Box>
+
+      {
+        open && <div className={styles.mobileLinks}>
+          {links.map((link) => (
+            <Link className={styles.menu_item} color="secondary" href={link.path} scroll={false}>{link.title}</Link>
+          ))}
+        </div>
+      }
 
     </Box>
   );

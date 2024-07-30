@@ -1,4 +1,5 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import styles from "./bloco_1.module.css";
 
 const items = [
     {
@@ -25,12 +26,8 @@ export default function Bloco_1() {
     return (
         <Box
             id="bloco_1"
-            sx={{
-                display: 'flex',
-                gap: 4,
-                marginTop: 4,
-                marginBottom: 4,
-            }}
+            className={styles.wrapper}
+
         >
             <Box
                 component="img"
