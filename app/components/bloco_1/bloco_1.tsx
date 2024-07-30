@@ -45,8 +45,7 @@ export default function Bloco_1() {
                     sx={{
                         marginBottom: '24px',
                     }}>
-                    A melhor Pizza com o melhor <br></br>
-                    atendimento da cidade
+                    A melhor Pizza com o melhor atendimento da cidade
                 </Typography>
 
                 {items.map((item, index) => (

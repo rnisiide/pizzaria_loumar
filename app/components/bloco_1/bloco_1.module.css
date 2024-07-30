@@ -55,14 +55,14 @@
 
         border-radius: 16px;
 
-        /* height: 350px;
-        position: relative; */
     }
 
 
     .bloco_item {
         padding: 0px 6px;
         width: auto;
+        flex-direction: column;
+        gap: 12px;
 
     }
 
