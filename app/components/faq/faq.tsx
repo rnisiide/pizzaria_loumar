@@ -92,7 +92,6 @@ export default function Faq() {
                             style={{ borderBottomColor: '#d3d3d3' }}>
                             <Accordion
                                 elevation={0}
-                                expanded={expanded === `panel${panel}`}
                                 onChange={handleChange(`panel${panel}`)}>
                                 <AccordionSummary
                                     aria-controls={`panel${panel}-content`}
@@ -123,6 +122,7 @@ export default function Faq() {
                     )
                 }
                 )
+
                 }
             </Box>
 
@@ -133,5 +133,6 @@ export default function Faq() {
                 src="./Multipizza.png"
             />
         </Box >
+
     );
 }
