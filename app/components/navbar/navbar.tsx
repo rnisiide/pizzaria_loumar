@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { Box, Button, Link } from "@mui/material";
+import { Box, Button, Link, Typography } from "@mui/material";
 import WhatsAppIcon from '../../../public/whatsapp-line.svg'
 import styles from "./navbar.module.css";
 import Image from "next/image";
@@ -9,17 +9,17 @@ import Image from "next/image";
 const links = [
   {
     title: "Bloco 1",
-    path: "#bloco_1",
+    path: 604,
 
   },
   {
     title: "FAQ",
-    path: "#faq",
+    path: 1155,
 
   },
   {
     title: "Contato",
-    path: "#contato",
+    path: 1897,
 
   },
 ];
@@ -60,7 +60,24 @@ export default function NavBar() {
 
         <Box className={styles.menu}>
           {links.map((link =>
-            <Link className={styles.menu_item} color="secondary" href={link.path} scroll={false}>{link.title}</Link>
+            <Typography
+              className={styles.menu_item}
+              color="secondary"
+
+
+              onClick={() => {
+                window.scroll({
+                  top: link.path,
+                  behavior: 'smooth'
+                })
+              }}
+
+            >{link.title}
+            </Typography>
+
+
+
+
 
           ))}
         </Box>

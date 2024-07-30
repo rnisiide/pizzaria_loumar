@@ -39,8 +39,6 @@ export default function Contato() {
         }
     }
 
-
-
     return (
         <Box id='contato'>
             <Box className={styles.duvida}>
