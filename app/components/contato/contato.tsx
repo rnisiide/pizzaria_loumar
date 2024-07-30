@@ -1,8 +1,15 @@
 "use client"
 import React, { useState } from 'react';
-import { TextField, Button, Container, Box, Typography } from '@mui/material';
+import { TextField, Button, Container, Box, Typography, Icon } from '@mui/material';
+import styles from "./contato.module.css";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { FormControl } from '@mui/material';
+import Input from '@mui/material/Input';
+import InputLabel from '@mui/material/InputLabel';
+
 
 export default function Contato() {
+
 
     const [email, setEmail] = useState("")
     const [nome, setNome] = useState("")
@@ -37,68 +44,77 @@ export default function Contato() {
 
 
     return (
-        <Container id='contato'>
-
-            <Box>
-                <Typography>
+        <Box id='contato'>
+            <Box className={styles.duvida}>
+                <Typography variant='h3'>
                     Ainda tem dúvidas sobre Pizza?
                 </Typography>
-                <Typography>
+                <Typography variant='body1'>
                     Entre em contato direto com nossos atendentes.
                 </Typography>
-                <Button target="_blank" href="https://wa.me/5545988041417?text=Oi%20mensagem%0A">Entre em contato</Button>
+                <Button
+                    className={styles.btn}
+                    startIcon={<WhatsAppIcon />}
+                    variant="contained"
+                    color="warning"
+                    target="_blank"
+                    href="https://wa.me/5545988041417?text=Oi%20mensagem%0A"
+                > Entrar em contato
+                </Button>
+
             </Box>
 
-            <Box>
-                <Typography
-                    variant="h1"
-                >
+            <Box className={styles.form_wrapper}>
+                <Typography variant="h1" align='center'>
                     Entre em contato
                 </Typography>
-                <Typography
-                    variant="h2"
-                >
-                    Fale com a nossa equipe especializada e adquira nossos serviços
+                <Typography variant="h2" align='center' marginY={2}>
+                    Fale com a nossa equipe especializada <br></br>
+                    e adquira nossos serviços
                 </Typography>
-                <Typography>
-                    Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu. in viverra velit.
+                <Typography variant="body1" align='center'>
+                    Lorem ipsum dolor sit amet consectetur. Platea viverra nam vitae convallis. Orci fringilla imperdiet <br></br>
+                    malesuada ullamcorper facilisis.
                 </Typography>
+                <Box >
+                    <form className={styles.form_items} autoComplete="off" onSubmit={handleSubmit}>
+
+
+                        <TextField
+                            label="Primeiro nome"
+                            onChange={e => setNome(e.target.value)}
+                            type='text'
+                            value={nome}
+                            error={nomeError}
+                        />
+                        <TextField
+                            label="Email"
+                            onChange={e => setEmail(e.target.value)}
+                            type="email"
+                            value={email}
+                            error={emailError}
+                        />
+                        <TextField
+                            label="Mensagem"
+                            onChange={e => setMensagem(e.target.value)}
+                            type="text"
+                            value={mensagem}
+                            error={mensagemError}
+                        />
+                        <Button
+                            variant='contained'
+                            type="submit"
+                            color='primary'
+                        >
+                            Enviar mensagem
+                        </Button>
+
+                    </form>
+                </Box>
             </Box>
 
-            <Box>
-                <form autoComplete="off" onSubmit={handleSubmit}>
+        </Box>
 
-                    <TextField
-                        label="Primeiro nome"
-                        onChange={e => setNome(e.target.value)}
-                        type='text'
-                        value={nome}
-                        error={nomeError}
-                    />
-                    <TextField
-                        label="Email"
-                        onChange={e => setEmail(e.target.value)}
-                        type="email"
-                        value={email}
-                        error={emailError}
-                    />
-                    <TextField
-                        label="Mensagem"
-                        onChange={e => setMensagem(e.target.value)}
-                        type="text"
-                        value={mensagem}
-                        error={mensagemError}
-                    />
-                    <Button
-                        variant='contained'
-                        type="submit"
-                        color='primary'
-                    >
-                        Enviar mensagem
-                    </Button>
-                </form>
-            </Box>
-        </Container>
     );
 }
 

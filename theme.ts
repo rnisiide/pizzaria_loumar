@@ -18,8 +18,11 @@ const theme = createTheme({
             main: '#0C111D',
         },
         secondary: {
-            main: '#FFFFFF'
-        }
+            main: '#FFFFFF',
+        },
+        warning: {
+            main: '#25D366',
+        },
     },
     typography: {
         button: {
@@ -36,6 +39,13 @@ const theme = createTheme({
             fontWeight: '400'
 
         },
+        h3: {
+            fontFamily: "Inter",
+            color: '#101828',
+            fontWeight: '600',
+            fontSize: '18px',
+
+        },
         subtitle1: {
             fontFamily: "Inter",
             color: '#1D2939',
@@ -50,6 +60,13 @@ const theme = createTheme({
             fontSize: '14px',
 
         },
+        body2: {
+            fontFamily: "Inter",
+            color: '#475467',
+            fontWeight: '400',
+            fontSize: '16px',
+
+        }
 
 
     }

@@ -36,7 +36,9 @@ export default function Faq() {
 
     return (
 
-        <Box className={styles.wrapper}>
+        <Box
+            id="faq"
+            className={styles.wrapper}>
 
             <Box>
                 <Typography

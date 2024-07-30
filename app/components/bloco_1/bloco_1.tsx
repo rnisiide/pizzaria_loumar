@@ -24,7 +24,7 @@ const items = [
 export default function Bloco_1() {
     return (
         <Box
-            width={1216}
+            id="bloco_1"
             sx={{
                 display: 'flex',
                 gap: 4,
