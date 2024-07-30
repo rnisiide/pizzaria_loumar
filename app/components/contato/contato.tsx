@@ -81,7 +81,7 @@ export default function Contato() {
                                 Primeiro Nome
                             </Typography>
                             <TextField
-                                fullWidth='true'
+                                fullWidth={true}
                                 onChange={e => setNome(e.target.value)}
                                 type='text'
                                 value={nome}
@@ -100,7 +100,7 @@ export default function Contato() {
                                 Email
                             </Typography>
                             <TextField
-                                fullWidth='true'
+                                fullWidth={true}
                                 onChange={e => setEmail(e.target.value)}
                                 type="email"
                                 value={email}
@@ -123,7 +123,7 @@ export default function Contato() {
                                 type="textarea"
                                 value={mensagem}
                                 error={mensagemError}
-                                fullWidth='true'
+                                fullWidth={true}
                                 InputProps={{
                                     style: {
                                         borderRadius: "8px",
