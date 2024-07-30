@@ -24,22 +24,15 @@ const items = [
 
 export default function Bloco_1() {
     return (
-        <Box
-            id="bloco_1"
-            className={styles.wrapper}
-
-        >
+        <Box id="bloco_1" className={styles.wrapper}>
             <Box
+                className={styles.bloco_img}
                 component="img"
-                sx={{
-                    height: 476,
-                    width: 572
-                }}
                 alt="Logo pizzaria"
                 src="./Pizza_derretendo_desktop.png"
             />
 
-            <Box>
+            <Box className={styles.bloco_texto}>
                 <Typography
                     variant="h1"
                     sx={{
@@ -47,19 +40,18 @@ export default function Bloco_1() {
                     }}>
                     Por que escolher Pizza SVG
                 </Typography>
-                <Typography variant="h2">
+                <Typography variant="h2"
+                    sx={{
+                        marginBottom: '24px',
+                    }}>
                     A melhor Pizza com o melhor <br></br>
                     atendimento da cidade
                 </Typography>
 
                 {items.map((item, index) => (
                     <Box
-                        width={488}
+                        className={styles.bloco_item}
                         key={index}
-                        sx={{
-                            display: 'flex',
-                            marginTop: '12px',
-                        }}
                     >
                         <Box
                             width={48}
@@ -86,9 +78,6 @@ export default function Bloco_1() {
 
                     </Box>
                 ))}
-
-
-
             </Box>
 
         </Box>

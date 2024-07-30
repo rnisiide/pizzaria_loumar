@@ -1,6 +1,8 @@
 .wrapper {
+    margin-top: 75px;
+    margin-bottom: 128px;
     display: flex;
-    gap: 32px;
+    gap: 36px;
 
 }
 
@@ -22,7 +24,17 @@
 
 @media (max-width: 1200px) {
     .wrapper {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
+        margin: 40px 16px;
+    }
+
+    .faq_img {
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        margin-left: 16px;
+        margin-right: 16px;
+        border-radius: 16px;
     }
 }

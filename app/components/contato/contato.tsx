@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { TextField, Button, Container, Box, Typography, Icon } from '@mui/material';
+import { TextField, Button, Box, Typography } from '@mui/material';
 import styles from "./contato.module.css";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Send from '../../../public/send-01.svg'
@@ -40,14 +40,16 @@ export default function Contato() {
     }
 
     return (
-        <Box id='contato'>
+        <Box id='contato' className={styles.contato}>
             <Box className={styles.duvida}>
-                <Typography variant='h3'>
-                    Ainda tem dúvidas sobre Pizza?
-                </Typography>
-                <Typography variant='body1'>
-                    Entre em contato direto com nossos atendentes.
-                </Typography>
+                <Box className={styles.perguntas}>
+                    <Typography variant='h3'>
+                        Ainda tem dúvidas sobre Pizza?
+                    </Typography>
+                    <Typography variant='body2'>
+                        Entre em contato direto com nossos atendentes.
+                    </Typography>
+                </Box>
                 <Button
                     className={styles.btn}
                     startIcon={<WhatsAppIcon />}
@@ -64,18 +66,33 @@ export default function Contato() {
                 <Typography variant="h1" align='center'>
                     Entre em contato
                 </Typography>
-                <Typography variant="h2" align='center' marginY={2}>
-                    Fale com a nossa equipe especializada <br></br>
-                    e adquira nossos serviços
-                </Typography>
-                <Typography variant="body1" align='center'>
-                    Lorem ipsum dolor sit amet consectetur. Platea viverra nam vitae convallis. Orci fringilla imperdiet <br></br>
-                    malesuada ullamcorper facilisis.
-                </Typography>
+                <Box className={styles.textDesktop}>
+                    <Typography variant="h2" align='center'>
+                        Fale com a nossa equipe especializada
+                        e adquira nossos serviços
+                    </Typography>
+                    <Typography variant="body1" align='center'>
+                        Lorem ipsum dolor sit amet consectetur. Platea viverra nam vitae convallis. Orci fringilla imperdiet
+                        malesuada ullamcorper facilisis.
+                    </Typography>
+                </Box>
+                <Box className={styles.textMobile}>
+                    <Typography variant="h2" align='center'>
+                        Se desejar alguma informação ou efetuar uma compra com nossos atendentes
+                    </Typography>
+                    <Typography variant="body1" align='center'>
+                        Lorem ipsum dolor sit amet consectetur. Platea viverra nam vitae convallis. Orci fringilla imperdiet
+                        malesuada ullamcorper facilisis.
+                    </Typography>
+                </Box>
                 <Box>
                     <form className={styles.form_items} autoComplete="off" onSubmit={handleSubmit}>
                         <Box className={styles.form_text}>
-                            <Typography>
+                            <Typography
+                                variant='body1'
+                                fontWeight={500}
+                                paddingBottom={'6px'}
+                            >
                                 Primeiro Nome
                             </Typography>
                             <TextField
@@ -87,14 +104,18 @@ export default function Contato() {
                                 InputProps={{
                                     style: {
                                         borderRadius: "8px",
-                                        height: '44px'
+                                        height: '44px',
+                                        borderColor: '#D0D5DD'
                                     }
                                 }}
                             />
                         </Box>
 
                         <Box className={styles.form_text}>
-                            <Typography>
+                            <Typography
+                                variant='body1'
+                                fontWeight={500}
+                                paddingBottom={'6px'}>
                                 Email
                             </Typography>
                             <TextField
@@ -106,14 +127,18 @@ export default function Contato() {
                                 InputProps={{
                                     style: {
                                         borderRadius: "8px",
-                                        height: '44px'
+                                        height: '44px',
+                                        borderColor: '#D0D5DD'
                                     }
                                 }}
                             />
                         </Box>
 
                         <Box className={styles.form_textarea}>
-                            <Typography>
+                            <Typography
+                                variant='body1'
+                                fontWeight={500}
+                                paddingBottom={'6px'}>
                                 Mensagem
                             </Typography>
                             <TextField

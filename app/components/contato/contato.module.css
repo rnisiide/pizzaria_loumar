@@ -1,6 +1,26 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy/Gilroy-Bold.ttf') format('truetype'),
+        /*   url('myfont.woff') format('woff');*/
+}
+
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Bold'), url('/fonts/Gilroy/Gilroy-Bold.woff') format('woff');
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .duvida {
-    margin: 60px 0px;
-    padding: 20px 0px;
+    padding-top: 48px;
+    padding-bottom: 40px;
     height: 236px;
     border-style: solid;
     border-width: 1px;
@@ -12,6 +32,15 @@
     justify-content: space-around;
 }
 
+.perguntas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+
+}
+
 .btn {
     color: #FFFFFF;
     width: 207px;
@@ -19,27 +48,37 @@
 }
 
 .form_wrapper {
+    margin-top: 86px;
+    width: 800px;
     height: 667px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
+    justify-content: center;
 
+}
+
+.form_wrapper>h2 {
+    padding-top: 8px;
+    padding-bottom: 16px;
+    font-family: 'Gilroy-Bold';
+    font-weight: normal;
 }
 
 
 
 .form_items {
+    margin-top: 55px;
     width: 480px;
     height: 436px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 24px;
 }
 
 .form_text {
     height: 70px;
-    gap: 6px;
 }
 
 .form_textarea {
@@ -47,8 +86,69 @@
     gap: 6px;
 }
 
+.form_textarea>input {
+    border-color: #D0D5DD;
+    color: #D0D5DD;
+
+}
+
 .form_btn {
+    margin-top: 32px;
     background-color: #FF5000;
     height: 56px;
     border-radius: 8px;
+}
+
+.form_btn:hover {
+    background-color: #FF5000;
+    font-weight: bold;
+}
+
+.textDesktop {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    gap: 16px;
+}
+
+.textMobile {
+    display: none;
+}
+
+
+
+@media (max-width: 1200px) {
+    .form_wrapper {
+        width: 100%;
+        height: auto;
+        margin: 48px 16px 0px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contato {
+        margin: 0px 16px
+    }
+
+
+
+    .textDesktop {
+        display: none;
+    }
+
+    .textMobile {
+        margin-top: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .form_items {
+
+        width: 90vw;
+        margin-top: 32px;
+        padding: 0px 6px;
+    }
 }

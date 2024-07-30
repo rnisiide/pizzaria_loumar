@@ -16,31 +16,6 @@ export default function Hero() {
                 />
             </Box>
 
-
-
         </Box>
-
-
-
-
     );
 }
-
-/*
-
- <Box
-                sx={{
-                    display: 'block',
-                    maxWidth: '100%',
-                    height: 425,
-                }}
-            >
-                <Image
-                    objectFit="cover"
-                    fill
-
-                    src="/BANNER DESKTOP.png"
-                    alt="Logo pizzaria" />
-            </Box>
-
-*/

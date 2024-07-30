@@ -6,11 +6,21 @@
     align-items: center;
     height: 298.47pxpx;
     padding: 64px 0px 48px 0px;
+    margin-top: 116px;
 
 }
 
 .address {
-    padding-top: 20px;
+    padding-top: 32px;
     padding-bottom: 12px;
 
+}
+
+@media (max-width: 768px) {
+
+    .footer {
+        margin-top: 165px;
+        padding-bottom: 32px;
+
+    }
 }

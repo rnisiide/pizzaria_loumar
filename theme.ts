@@ -65,7 +65,6 @@ const theme = createTheme({
             color: '#475467',
             fontWeight: '400',
             fontSize: '16px',
-
         }
 
 

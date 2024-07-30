@@ -6,6 +6,34 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import * as React from 'react';
 import styles from "./faq.module.css";
 
+const faqs = [
+    {
+        title: "Pizza é boa ?",
+        description: 'Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu. In viverra velit.',
+
+    },
+    {
+        title: "Vende pizza?",
+        description: 'Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu. In viverra velit.',
+
+    },
+    {
+        title: "Tem pizza de calabresa?",
+        description: 'Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu. In viverra velit.',
+
+    },
+    {
+        title: "Tem delivery?",
+        description: 'Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu. In viverra velit.',
+
+    },
+    {
+        title: "Entrega de bike?",
+        description: 'Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu. In viverra velit.',
+
+    },
+];
+
 export default function Faq() {
 
 
@@ -36,9 +64,7 @@ export default function Faq() {
 
     return (
 
-        <Box
-            id="faq"
-            className={styles.wrapper}>
+        <Box id="faq" className={styles.wrapper}>
 
             <Box>
                 <Typography
@@ -52,155 +78,52 @@ export default function Faq() {
                     Tire todas as suas dúvidas sobre nosso processo de produção!
                 </Typography>
                 <Typography
-                    marginBottom={2}
-                    variant="body1">
+                    marginBottom={3}
+                    variant="body1"
+                    fontSize={'16px'}>
                     Lorem ipsum dolor sit amet consectetur. <span style={{ color: '#FF590D', fontWeight: '500' }}>Etiam pellentesque </span>
-                    gravida eu egestas sed quis donec ipsum eu. in viverra velit.
+                    gravida eu egestas sed quis donec ipsum eu. In viverra velit.
                 </Typography>
 
-                <Box className={styles.accordion_wrap}>
-                    <Accordion
-                        expanded={expanded === 'panel1'}
-                        onChange={handleChange('panel1')}
-                        elevation={0}>
-                        <AccordionSummary
-                            aria-controls="panel1d-content"
-                            id="panel1d-header"
-                        >
-                            <Typography>Pizza é boa ?</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography
-                                variant="body1">
-                                Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu.
-                                In viverra velit.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Box
-                        id='box-panel1'
-                        width={24}
-                        height={24}
-                        marginTop={1}
-                        component="img"
-                        src={'./minus-circle.svg'}
-                    />
-                </Box>
-
-                <Box className={styles.accordion_wrap}>
-                    <Accordion
-                        elevation={0}
-                        expanded={expanded === 'panel2'}
-                        onChange={handleChange('panel2')}>
-                        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-                            <Typography>Vende pizza?</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography
-                                variant="body1">
-                                Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu.
-                                In viverra velit.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Box
-                        id='box-panel2'
-                        width={24}
-                        height={24}
-                        marginTop={1}
-                        component="img"
-                        src={'./plus-circle.svg'}
-                    />
-                </Box>
-
-
-                <Box className={styles.accordion_wrap}>
-                    <Accordion
-                        elevation={0}
-                        expanded={expanded === 'panel3'}
-                        onChange={handleChange('panel3')}
-                    >
-                        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-                            <Typography>Tem pizza de calabresa?</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography
-                                variant="body1">
-                                Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu.
-                                In viverra velit.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Box
-                        id='box-panel3'
-                        width={24}
-                        height={24}
-                        marginTop={1}
-                        component="img"
-                        src={'./plus-circle.svg'}
-                    />
-                </Box>
-
-
-
-                <Box className={styles.accordion_wrap}>
-                    <Accordion
-                        elevation={0}
-                        expanded={expanded === 'panel4'}
-                        onChange={handleChange('panel4')}>
-                        <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-                            <Typography>Tem delivery?</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography
-                                variant="body1">
-                                Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu.
-                                In viverra velit.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Box
-                        id='box-panel4'
-                        width={24}
-                        height={24}
-                        marginTop={1}
-                        component="img"
-                        src={'./plus-circle.svg'}
-                    />
-
-                </Box>
-
-
-                <Box
-                    className={styles.accordion_wrap}
-                    style={{ borderBottomStyle: 'none' }}>
-                    <Accordion
-                        elevation={0}
-                        expanded={expanded === 'panel5'}
-                        onChange={handleChange('panel5')}>
-                        <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-                            <Typography>Entrega de bike?</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails
-                        >
-                            <Typography
-                                variant="body1">
-                                Lorem ipsum dolor sit amet consectetur. Etiam pellentesque gravida eu egestas sed quis donec ipsum eu.
-                                In viverra velit.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Box
-                        id='box-panel5'
-                        width={24}
-                        height={24}
-                        marginTop={1}
-                        component="img"
-                        src={'./plus-circle.svg'}
-                    />
-                </Box>
-
-
+                {faqs.map((faq, index) => {
+                    const panel = index + 1;
+                    return (
+                        <Box className={styles.accordion_wrap}
+                            style={{ borderBottomColor: '#d3d3d3' }}>
+                            <Accordion
+                                elevation={0}
+                                expanded={expanded === `panel${panel}`}
+                                onChange={handleChange(`panel${panel}`)}>
+                                <AccordionSummary
+                                    aria-controls={`panel${panel}-content`}
+                                    id={`panel${panel}-header`}>
+                                    <Typography
+                                        sx={{
+                                            fontFamily: "Inter",
+                                            color: '#1D2939',
+                                            fontWeight: '500',
+                                            fontSize: '18px',
+                                        }}>{faq.title}</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography variant="body1">
+                                        {faq.description}
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                            <Box
+                                id={`box-panel${panel}`}
+                                width={24}
+                                height={24}
+                                marginTop={1}
+                                component="img"
+                                src={'./plus-circle.svg'}
+                            />
+                        </Box>
+                    )
+                }
+                )
+                }
             </Box>
 
             <Box
@@ -209,8 +132,6 @@ export default function Faq() {
                 alt="Logo pizzaria"
                 src="./Multipizza.png"
             />
-        </Box>
-
-
+        </Box >
     );
 }

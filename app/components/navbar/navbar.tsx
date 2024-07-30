@@ -9,17 +9,17 @@ import Image from "next/image";
 const links = [
   {
     title: "Bloco 1",
-    path: 604,
+    path: 454,
 
   },
   {
     title: "FAQ",
-    path: 1155,
+    path: 1015,
 
   },
   {
-    title: "Contato",
-    path: 1897,
+    title: "CONTATO",
+    path: 2117,
 
   },
 ];
@@ -62,6 +62,7 @@ export default function NavBar() {
           {links.map((link =>
             <Typography
               className={styles.menu_item}
+              variant="h1"
               color="secondary"
               onClick={() => {
                 window.scroll({

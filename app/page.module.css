@@ -1,5 +1,6 @@
 .container {
     width: 1216px;
+    padding: 0;
 }
 
 @media (max-width: 1200px) {
@@ -11,11 +12,12 @@
 @media (max-width: 768px) {
 
     .container {
-        width: 640px;
+        width: auto;
     }
 
 }
 
+/*
 
 @media (max-width: 640px) {
     .container {
@@ -28,3 +30,11 @@
         width: 380px;
     }
 }
+
+@media (max-width: 380px) {
+    .container {
+        width: auto;
+    }
+}
+
+*/
