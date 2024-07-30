@@ -50,10 +50,14 @@ export default function Contato() {
             </Box>
 
             <Box>
-                <Typography>
+                <Typography
+                    variant="h1"
+                >
                     Entre em contato
                 </Typography>
-                <Typography>
+                <Typography
+                    variant="h2"
+                >
                     Fale com a nossa equipe especializada e adquira nossos serviços
                 </Typography>
                 <Typography>
@@ -63,7 +67,7 @@ export default function Contato() {
 
             <Box>
                 <form autoComplete="off" onSubmit={handleSubmit}>
-                    <h2>Login Form</h2>
+
                     <TextField
                         label="Primeiro nome"
                         onChange={e => setNome(e.target.value)}

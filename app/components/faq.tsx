@@ -24,10 +24,14 @@ export default function Faq() {
             }}
         >
             <Box>
-                <Typography>
+                <Typography
+                    variant="h1"
+                >
                     FAQ
                 </Typography>
-                <Typography>
+                <Typography
+                    variant="h2"
+                >
                     Tire todas as suas dúvidas sobre nosso processo de produção!
                 </Typography>
                 <Typography>
