@@ -19,6 +19,7 @@ const theme = createTheme({
         },
         secondary: {
             main: '#FFFFFF',
+            dark: '#F2F4F7',
         },
         warning: {
             main: '#25D366',
@@ -37,7 +38,6 @@ const theme = createTheme({
         h2: {
             fontSize: '32px',
             fontWeight: '400'
-
         },
         h3: {
             fontFamily: "Inter",

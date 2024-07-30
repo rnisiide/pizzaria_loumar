@@ -1,0 +1,16 @@
+.footer {
+    color: black;
+    background-color: #FFB800;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 298.47pxpx;
+    padding: 64px 0px 48px 0px;
+
+}
+
+.address {
+    padding-top: 20px;
+    padding-bottom: 12px;
+
+}

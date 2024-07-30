@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import { TextField, Button, Container, Box, Typography, Icon } from '@mui/material';
 import styles from "./contato.module.css";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import { FormControl } from '@mui/material';
-import Input from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
+import Send from '../../../public/send-01.svg'
 
 
 export default function Contato() {
@@ -76,35 +74,70 @@ export default function Contato() {
                     Lorem ipsum dolor sit amet consectetur. Platea viverra nam vitae convallis. Orci fringilla imperdiet <br></br>
                     malesuada ullamcorper facilisis.
                 </Typography>
-                <Box >
+                <Box>
                     <form className={styles.form_items} autoComplete="off" onSubmit={handleSubmit}>
+                        <Box className={styles.form_text}>
+                            <Typography>
+                                Primeiro Nome
+                            </Typography>
+                            <TextField
+                                fullWidth='true'
+                                onChange={e => setNome(e.target.value)}
+                                type='text'
+                                value={nome}
+                                error={nomeError}
+                                InputProps={{
+                                    style: {
+                                        borderRadius: "8px",
+                                        height: '44px'
+                                    }
+                                }}
+                            />
+                        </Box>
 
+                        <Box className={styles.form_text}>
+                            <Typography>
+                                Email
+                            </Typography>
+                            <TextField
+                                fullWidth='true'
+                                onChange={e => setEmail(e.target.value)}
+                                type="email"
+                                value={email}
+                                error={emailError}
+                                InputProps={{
+                                    style: {
+                                        borderRadius: "8px",
+                                        height: '44px'
+                                    }
+                                }}
+                            />
+                        </Box>
 
-                        <TextField
-                            label="Primeiro nome"
-                            onChange={e => setNome(e.target.value)}
-                            type='text'
-                            value={nome}
-                            error={nomeError}
-                        />
-                        <TextField
-                            label="Email"
-                            onChange={e => setEmail(e.target.value)}
-                            type="email"
-                            value={email}
-                            error={emailError}
-                        />
-                        <TextField
-                            label="Mensagem"
-                            onChange={e => setMensagem(e.target.value)}
-                            type="text"
-                            value={mensagem}
-                            error={mensagemError}
-                        />
+                        <Box className={styles.form_textarea}>
+                            <Typography>
+                                Mensagem
+                            </Typography>
+                            <TextField
+                                onChange={e => setMensagem(e.target.value)}
+                                type="textarea"
+                                value={mensagem}
+                                error={mensagemError}
+                                fullWidth='true'
+                                InputProps={{
+                                    style: {
+                                        borderRadius: "8px",
+                                        height: '160px',
+                                    }
+                                }}
+                            />
+                        </Box>
+
                         <Button
+                            startIcon={<Send />}
+                            className={styles.form_btn}
                             variant='contained'
                             type="submit"
-                            color='primary'
                         >
                             Enviar mensagem
                         </Button>
@@ -119,14 +152,3 @@ export default function Contato() {
 }
 
 
-/*
-                <FormControl>
-                    <FormLabel>Enter Name</FormLabel>
-                    <TextField></TextField>
-                    <FormLabel>Email</FormLabel>
-                    <TextField></TextField>
-                    <FormLabel>Mensagem</FormLabel>
-                    <TextField></TextField>
-                    <Button>Enviar mensagem</Button>
-                </FormControl>
-*/

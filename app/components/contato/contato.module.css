@@ -26,9 +26,29 @@
 
 }
 
+
+
 .form_items {
+    width: 480px;
+    height: 436px;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    justify-content: space-between;
+    gap: 24px;
+}
 
+.form_text {
+    height: 70px;
+    gap: 6px;
+}
+
+.form_textarea {
+    height: 160px;
+    gap: 6px;
+}
+
+.form_btn {
+    background-color: #FF5000;
+    height: 56px;
+    border-radius: 8px;
 }

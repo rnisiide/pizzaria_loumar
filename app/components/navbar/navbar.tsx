@@ -1,5 +1,6 @@
 import { Box, Container, AppBar, Toolbar, Button, Link } from "@mui/material";
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+//import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import WhatsAppIcon from '../../../public/whatsapp-line.svg'
 import styles from "./navbar.module.css";
 
 export default function NavBar() {
