@@ -63,22 +63,14 @@ export default function NavBar() {
             <Typography
               className={styles.menu_item}
               color="secondary"
-
-
               onClick={() => {
                 window.scroll({
                   top: link.path,
                   behavior: 'smooth'
                 })
-              }}
-
-            >{link.title}
+              }}>
+              {link.title}
             </Typography>
-
-
-
-
-
           ))}
         </Box>
 
@@ -96,8 +88,18 @@ export default function NavBar() {
 
       {
         open && <div className={styles.mobileLinks}>
-          {links.map((link) => (
-            <Link className={styles.menu_item} color="secondary" href={link.path} scroll={false}>{link.title}</Link>
+          {links.map((link =>
+            <Typography
+              className={styles.menu_item}
+              color="secondary"
+              onClick={() => {
+                window.scroll({
+                  top: link.path,
+                  behavior: 'smooth'
+                })
+              }}>
+              {link.title}
+            </Typography>
           ))}
         </div>
       }
