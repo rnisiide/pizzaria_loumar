@@ -34,7 +34,7 @@ export default function Contato() {
 
         if (email && nome && mensagem) {
             alert(
-                `Nome: ${nome}, E-mail: ${email}, Mensagem: ${mensagem}`
+                `Nome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}`
             )
         }
     }
@@ -100,7 +100,6 @@ export default function Contato() {
                                 onChange={e => setNome(e.target.value)}
                                 type='text'
                                 value={nome}
-                                error={nomeError}
                                 InputProps={{
                                     style: {
                                         borderRadius: "8px",
@@ -123,7 +122,6 @@ export default function Contato() {
                                 onChange={e => setEmail(e.target.value)}
                                 type="email"
                                 value={email}
-                                error={emailError}
                                 InputProps={{
                                     style: {
                                         borderRadius: "8px",
@@ -147,6 +145,8 @@ export default function Contato() {
                                 value={mensagem}
                                 error={mensagemError}
                                 fullWidth={true}
+                                rows={3}
+                                maxRows={5}
                                 InputProps={{
                                     style: {
                                         borderRadius: "8px",
