@@ -32,7 +32,6 @@ const theme = createTheme({
             fontWeight: '600',
         },
         h2: {
-            fontFamily: gilroy,
             fontSize: '32px',
             fontWeight: '400'
 
@@ -50,7 +49,7 @@ const theme = createTheme({
             fontWeight: '400',
             fontSize: '14px',
 
-        }
+        },
 
 
     }
