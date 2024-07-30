@@ -19,18 +19,10 @@ export default function Contato() {
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault()
 
-        setEmailError(false)
-        setNomeError(false)
+        if (email == '' || nome == '' || mensagem == '') {
+            alert('Favor preencher todos os campos')
+        }
 
-        if (email == '') {
-            setEmailError(true)
-        }
-        if (nome == '') {
-            setNomeError(true)
-        }
-        if (mensagem == '') {
-            setMensagemError(true)
-        }
 
         if (email && nome && mensagem) {
             alert(
@@ -77,7 +69,7 @@ export default function Contato() {
                     </Typography>
                 </Box>
                 <Box className={styles.textMobile}>
-                    <Typography variant="h2" align='center'>
+                    <Typography variant="h2" align='center' className={styles.gilroyText}>
                         Se desejar alguma informação ou efetuar uma compra com nossos atendentes
                     </Typography>
                     <Typography variant="body1" align='center'>
