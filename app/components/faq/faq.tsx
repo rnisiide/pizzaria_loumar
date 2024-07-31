@@ -109,6 +109,7 @@ export default function Faq() {
                                         {faq.description}
                                     </Typography>
                                 </AccordionDetails>
+
                             </Accordion>
                             <Box
                                 id={`box-panel${panel}`}
@@ -118,6 +119,7 @@ export default function Faq() {
                                 component="img"
                                 src={'./plus-circle.svg'}
                             />
+
                         </Box>
                     )
                 }

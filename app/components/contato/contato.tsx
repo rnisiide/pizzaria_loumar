@@ -137,8 +137,6 @@ export default function Contato() {
                                 value={mensagem}
                                 error={mensagemError}
                                 fullWidth={true}
-                                rows={3}
-                                maxRows={5}
                                 InputProps={{
                                     style: {
                                         borderRadius: "8px",

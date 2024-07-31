@@ -98,6 +98,7 @@ export default function NavBar() {
                   top: link.path,
                   behavior: 'smooth'
                 })
+                setOpen((prev) => !prev)
               }}>
               {link.title}
             </Typography>

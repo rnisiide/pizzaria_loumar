@@ -29,7 +29,6 @@
     align-items: center;
     justify-content: space-around;
     gap: 16px;
-
 }
 
 .btn {
@@ -119,8 +118,6 @@
         margin: 0px 16px
     }
 
-
-
     .textDesktop {
         display: none;
     }
@@ -138,5 +135,10 @@
         width: 90vw;
         margin-top: 32px;
         padding: 0px 6px;
+    }
+
+    .perguntas {
+        text-align: center;
+
     }
 }
